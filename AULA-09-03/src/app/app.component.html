@@ -1,0 +1,25 @@
+<div class="centro">
+
+  <mat-form-field appearance="standard">
+    <mat-label> user</mat-label>
+    <input type="text" matInput #inputTexto>
+
+  </mat-form-field>
+
+  <p> {{ inputTexto.value }}</p>
+  <p> {{ inputTexto.value.length }}</p>
+
+  <cmp #cmp></cmp><!--  colocando o elemento na cena -->
+<!--   view child vai produrar justo o CmpComponent -->
+
+  <span> {{ cmp.darOi() }}</span> <!-- acessando o metodo do elemento -->
+  <span> {{cmp.metodo() - 49999990 }}</span>
+  <span> {{ cmp.title }}</span> <!-- acessando as propriedades -->
+  
+  <cmp [numero]="5"></cmp>
+  <cmp [numero]="10"></cmp>
+  <cmp [numero]="15"></cmp>
+  <cmp [numero]="13" #confirma></cmp>
+  <cmp [numero]="17"></cmp>
+</div>
+

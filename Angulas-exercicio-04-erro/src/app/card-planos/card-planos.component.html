@@ -1,0 +1,16 @@
+<mat-card class="cartaozinho">
+    <mat-card-subtitle>{{plano}}</mat-card-subtitle>
+    <mat-card-title>{{valor}}</mat-card-title>
+    <mat-card-content>
+      <mat-divider inset></mat-divider>
+      <p>{{espaco}}</p>
+      <mat-divider inset></mat-divider>
+      <p>{{user}}</p>
+      <mat-divider inset></mat-divider>
+      <p>{{upload}}</p>
+    </mat-card-content>
+    <mat-divider inset></mat-divider>
+    <mat-card-actions>
+      <button mat-stroked-button (emissorEvento)="planoEscolhido()">LEARN MORE</button>
+        </mat-card-actions>
+      </mat-card>

@@ -1,0 +1,12 @@
+<mat-card [style] = "'max-width: 150px;' + 'background-color: ' + bgcolor + ';'">
+    <mat-card-header>
+        <mat-card-title>{{tituloCard}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p>{{conteudo}}</p>
+<button mat-button color="basic" (click)="emitirEventoPersonalizado()">Salvar</button>
+
+    </mat-card-content>
+</mat-card>
+
+

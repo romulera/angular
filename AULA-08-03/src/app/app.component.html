@@ -1,0 +1,57 @@
+<div class="centro">
+<div>
+{{ title}}
+
+
+<button mat-button color="accent">Clica aqui</button>
+
+{{ title.toUpperCase()}}
+</div>
+ Comprimento da variavel -{{ title.length }}
+
+- a String pode usar metodos JS {{ "abc".toUpperCase() }}
+</div>
+
+<div class="centro">
+
+<mat-form-field>
+  <input matInput type="text" placeholder="Insira o texto">
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput [type]="tipo" [placeholder]="placeholder" [disabled]=" 5<7">
+</mat-form-field>
+
+<button (click)="alertar()" mat-button color="accent"> Entra </button>
+
+<button (click)="alertar2($event)" mat-button color="accent"> Entra </button>
+
+
+
+<!-- Two way data Binding é compricado -->
+<div>
+
+<mat-form-field>
+  <mat-label></mat-label>
+  <input matInput [type]="tipo" placeholder=""> 
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label><---Tipo do Input ao lado </mat-label>
+  <input matInput type="text" placeholder="Digite o valor do imput" [(ngModel)]="tipo"> 
+</mat-form-field>
+
+
+</div>
+
+</div>
+
+<div class="centro">
+
+</div>
+
+
+
+
+
+

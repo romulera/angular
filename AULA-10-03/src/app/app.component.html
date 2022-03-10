@@ -1,0 +1,125 @@
+<style>
+  .error {
+    color: yellow;
+    background-color: red;
+  }
+</style>
+
+
+
+<p [ngStyle]="{
+  color: 'red', 
+  fontSize: '90px', 
+  backgroundColor: 5 < 8 ? 'black' : 'blue'}">
+
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id dignissimos saepe unde odit tempora, 
+  dolore voluptatem expedita 
+  harum commodi provident quod? Qui, nam eaque incidunt dignissimos debitis odit corrupti quaerat?
+</p>
+
+<div class="centro">
+<p [ngClass]="{ error: true }">
+  DEU RUIM !
+</p>
+
+
+<p [ngClass]="{ error: adicionarClasse}">
+  DEU RUIM !
+</p>
+
+<button mat-button color="accent" (click)="adicionarClasse = !adicionarClasse">Adicionar / Remover classe</button>
+
+
+
+<div class="centro">
+  
+<p [ngStyle]="{ 
+  color: 'yellow', 
+  'background-color':'black', 
+  textTransform: 'uppercase'}
+  "*ngIf="mostrarParagrafo == true"
+
+>
+  É por isso que eu falo ! Bora tomar os meios de produção !!!
+</p>
+<button mat-button color="accent" (click)="Marxismo()">Mostrar Marxismo</button>
+
+
+</div>
+
+<div class="centro" [ngSwitch]="cor"> <!-- //diretiva que vai testar a propriedade cor -->
+  <p style="color: white;" #p1 *ngSwitchCase="'branco'">opa paragrafo 1  </p>
+
+  <p style="color: rgb(122, 122, 122);" #p2 *ngSwitchCase="'cinza'">opa paragrafo 2 </p>
+
+  <p style="color: rgb(53, 53, 53);" #p3 *ngSwitchCase="'preto'">opa paragrafo 3 </p>
+
+  <p style="color: rgb(255, 115, 0);" #p4 *ngSwitchDefault=>opa paragrafo Default </p>
+
+  <button mat-button color='basic' (click)="alterarCor('branco')">White</button>
+  <button mat-button color='primary' (click)="alterarCor('cinza')">Gray</button>
+  <button mat-button color='accent' (click)="alterarCor('preto')">Black</button>
+
+  </div>
+
+  <div class="centro">
+    <h1> Array de alunos </h1>
+    <ul>
+      <li *ngFor="let aluno of alunos">{{aluno}}</li>
+    </ul>
+
+  </div>
+
+  <div class="centro">
+<mat-list>
+  <mat-list-item *ngFor="let aluno of alunos; let idx = index">{{ idx }}.{{aluno}}</mat-list-item>
+</mat-list>
+</div>
+<div class="centro">
+
+
+<mat-form-field appearance="fill">
+  <mat-label>Adiciona o infeliz </mat-label>
+  <input 
+  matInput 
+  placeholder="Adicione um aluno" 
+  #inputAluno 
+  (keyup.enter)="addAluno(inputAluno.value)">
+</mat-form-field> 
+<!--   a partir da variavel de template #inputaluno ele vai jogar o .value pra dentro do método addAluno -->
+
+  <button mat-raised-button color="primary" (click)="addAluno(inputAluno.value)">Adicionar</button>
+  </div>
+
+  <div class="centro">
+  <ng-container *ngFor="let n of numeros" >
+    <p *ngIf="n % 2 == 0"> {{n}} </p>
+  </ng-container>  
+  </div>
+
+
+  <div class="centro">
+    <app-cmp>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum atque fuga 
+        quisquam quae illo incidunt eum nam voluptas qui quam, est itaque nobis quaerat hic ab 
+        deserunt ex maxime aliquid!</p>
+
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum atque fuga 
+        quisquam quae illo incidunt eum nam voluptas qui quam, est itaque nobis quaerat hic ab 
+        deserunt ex maxime aliquid!</p>
+    </app-cmp>
+
+    <app-cmp>
+   <h1> normal </h1>
+   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum atque fuga 
+    quisquam </p>
+    </app-cmp>
+  </div>
+
+  <div class="centro">
+    <button appEstyledBtn > botao </button>
+    <button appEstyledBtn > botao </button>
+    <button appEstyledBtn bg="pink" > botao </button>
+
+    
+  </div>

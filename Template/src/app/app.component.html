@@ -1,0 +1,36 @@
+<div class="centro">
+<p>app component template brabo</p>
+<div class="centro">
+  {{loren}}
+</div>
+</div>
+
+<div class="centro">
+  <app-new 
+  tituloCard="Carros" 
+  bgcolor="white" 
+  conteudo="metodo de salvar"
+  (eventoPersonalizado)="salvar($event)"    >
+    
+  </app-new>
+</div>
+
+
+<div class="centro">
+  <app-new tituloCard="Motos"
+  conteudo="Evento dificil"
+  (eventoPersonalizado)="eventoDificil()"
+
+  >
+    
+  </app-new>
+</div>
+
+<div class="centro">
+  <app-new tituloCard="Drogas"
+  conteudo="Um brinde as drogas que mais um ano venceu a guerra contra as drogas!"
+  bgcolor="pink"
+  (eventoPersonalizado)="salvar($event)">
+    
+  </app-new>
+</div>

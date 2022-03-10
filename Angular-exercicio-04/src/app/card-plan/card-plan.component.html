@@ -1,0 +1,18 @@
+<mat-card class="cartaozinho">
+    <p>{{plano}}</p>
+    <mat-card-title><span style="font-size: 40px;">$ </span>{{valor}}</mat-card-title>
+    <mat-card-content>
+      <mat-divider inset></mat-divider>
+      <p>{{espaco}}</p>
+      <mat-divider inset></mat-divider>
+      <p>{{user}}</p>
+      <mat-divider inset></mat-divider>
+      <p>{{upload}}</p>
+    </mat-card-content>
+    <mat-divider inset></mat-divider>
+    <mat-card-actions>
+      <button mat-stroked-button (click)="openSnackBar(plano,valor)">LEARN MORE</button>
+        </mat-card-actions>
+      </mat-card>
+
+     

@@ -1,0 +1,33 @@
+<div class="centro">
+
+<div>
+  <app-card 
+  titulo="Cartãozinho Simples 1"
+  subtitulo="Subtitulo do cartãzinho"
+  [conteudo]="loren+loren+loren"
+  bg="white"></app-card>
+
+</div>
+
+<div>
+  <app-card
+  titulo="Cartãozinho Simples 2"
+  subtitulo="Subtitulo do cartãzinho2"
+  [conteudo]="loren+loren"> </app-card>
+</div>
+
+<div>
+  <app-card
+  titulo="Cartãozinho Simples 3"
+  subtitulo="Subtitulo do cartãzinho 3"
+  [conteudo]='loren'> </app-card>
+</div>
+
+</div>
+
+<div class="centro">
+
+  <app-botao (btnClickEvent)="clicou()"></app-botao>
+  <app-botao (btnClickEvent)="clicou2($event)"></app-botao>
+
+</div>

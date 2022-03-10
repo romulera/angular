@@ -1,0 +1,25 @@
+.cartaozinho {
+    box-sizing: border-box;
+    background-color: #fdfdfd;
+    width: 320px;
+    height: 450px;
+    text-align: center;
+    text-justify: inter-cluster;
+    border-radius: 9px;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 30px;
+}
+
+mat-card-title {
+    color: rgb(63, 63, 63);
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.mat-stroked-button {
+    width:100%;
+    padding: 8px;
+}
